@@ -37,7 +37,7 @@ public class Main {
 
 
 
-        ArrayList<Estado> lista = new ArrayList<Estado>();
+        ArrayList<Estado> lista = new ArrayList<>();
         lista.add(q0);
         lista.add(q1);
         lista.add(q2);

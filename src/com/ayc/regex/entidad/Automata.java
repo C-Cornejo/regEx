@@ -1,6 +1,6 @@
 package com.ayc.regex.entidad;
 
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
 
 public class Automata {
@@ -35,11 +35,8 @@ public class Automata {
                 finales++;
             }
         }
-        if(iniciales == 1 && finales >= 1)
-        {
-            return true;
-        }
-        return false;
+
+        return iniciales == 1 && finales >= 1;
     }
 
     private boolean validarAlfabeto(){
@@ -56,7 +53,7 @@ public class Automata {
 
     public String evaluar(){
         boolean r = false;
-        String response ="";
+        String response;
         if (validarAlfabeto())
         {
             if(validarEstados()) {
@@ -75,7 +72,7 @@ public class Automata {
     }
     public void reset()
     {
-        listaHilo = new ArrayList<Hilo>();
+        listaHilo = new ArrayList<>();
     }
 
     private boolean evaluarRegEx(Estado inicial,String palabra)
